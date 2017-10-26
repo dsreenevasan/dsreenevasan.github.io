@@ -1,0 +1,102 @@
+.navbar {
+    height: 10vh;
+    background-color: transparent;
+    border: none;
+    color: green;
+    z-index: 100;
+    font-family: 'Josefin Sans', sans-serif;
+    -webkit-transition: background-color 1s ease 0s;
+    transition: background-color 1s ease 0s;
+}
+.navbar-default .navbar-brand {
+    margin-top: 10px;
+    color: white;
+    /*border: 1px solid #FFFFFF;*/
+}
+.navbar-default .navbar-brand:hover {
+    color: #A9A9A9;
+    /*border: 1px solid #FFFF00;*/
+}
+.navbar-default .navbar-nav > li > a {
+    color: green;
+    margin: 10px 5px 5px 5px;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:active, .navbar-default .navbar-nav > li > a:focus {
+    color: green;
+    /*border: 1px solid #FFFF00;*/
+    background-color: transparent;
+}
+.navbar-default .navbar-nav > li > a:visited {
+    color: green;
+    text-decoration: none;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: green;
+    color: green;
+}
+.navbar-default .navbar-toggle {
+    border-color: #A9A9A9;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+    border: 1px solid #FFFF00;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    color: #A9A9A9;
+    background-color: #A9A9A9;
+}
+.navbar-default .navbar-collapse.collapse.in ul {
+    background-color: transparent;
+}
+
+/* Solid class attached on scroll past first section */
+.navbar.solid {
+    background-color: #e74c3c;
+    -webkit-transition: background-color 1s ease 0s;
+    transition: background-color 1s ease 0s;
+    box-shadow: 0 0 4px grey;
+}
+.navbar.solid .navbar-brand {
+    color: #23282d;
+    -webkit-transition: color 1s ease 0s;
+    transition: color 1s ease 0s;
+}
+.navbar.solid .navbar-nav > li > a {
+    color: #23282d;
+    -webkit-transition: color 1s ease 0s;
+    transition: color 1s ease 0s;
+}
+
+.navbar.solidone {
+    background-color: #f39c12;
+    -webkit-transition: background-color 1s ease 0s;
+    transition: background-color 1s ease 0s;
+    box-shadow: 0 0 4px grey;
+}
+.navbar.solidone .navbar-brand {
+    color: #23282d;
+    -webkit-transition: color 1s ease 0s;
+    transition: color 1s ease 0s;
+}
+.navbar.solidone .navbar-nav > li > a {
+    color: #23282d;
+    -webkit-transition: color 1s ease 0s;
+    transition: color 1s ease 0s;
+}
+
+.navbar.solidtwo {
+    background-color: #e53935;
+    -webkit-transition: background-color 1s ease 0s;
+    transition: background-color 1s ease 0s;
+    box-shadow: 0 0 4px grey;
+}
+.navbar.solidtwo .navbar-brand {
+    color: #23282d;
+    -webkit-transition: color 1s ease 0s;
+    transition: color 1s ease 0s;
+}
+.navbar.solidtwo .navbar-nav > li > a {
+    color: #23282d;
+    -webkit-transition: color 1s ease 0s;
+    transition: color 1s ease 0s;
+}

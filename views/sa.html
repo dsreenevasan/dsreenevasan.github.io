@@ -1,0 +1,64 @@
+<div ng-controller="SAController as ctrl" >
+    <toaster-container toaster-options="{'position-class': 'toast-top-center', 'close-button':true }"></toaster-container>
+    <nav class="navbar navbar-default navbar-fixed-top" style="background: #009688">
+        <div class="container">
+            <!--<img src="../images/test.png" style="height: 12vh; width: 4.90vw; margin: -1.5vh 0 0 -7vw; float: left">-->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only main-span">Toggle navigation</span>
+                    <span class="icon-bar main-span"></span>
+                    <span class="icon-bar main-span"></span>
+                    <span class="icon-bar main-span"></span>
+                </button>
+                <a class="navbar-brand" ng-click="ctrl.stateChange('main')"  style=" color: white; cursor: hand; cursor: pointer">Abacus '17</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li><a ng-click="ctrl.stateChange('events')" class="link link--yaku" style="color: white; cursor: hand; cursor: pointer  "><span>E</span><span>V</span><span>E</span><span>N</span><span>T</span><span>S</span></a></li>
+                    <li><a ng-click="ctrl.stateChange('workshops')" class="link link--yaku" style="color: white; cursor: hand; cursor: pointer  "><span>W</span><span>O</span><span>R</span><span>K</span><span>S</span><span>H</span><span>O</span><span>P</span><span>S</span></a></li>
+                    <li><a ng-click="ctrl.stateChange('accommodation')" class="link link--yaku" style="color: white; cursor: hand; cursor: pointer  "><span>A</span><span>C</span><span>C</span><span>O</span><span>M</span><span>M</span><span>O</span><span>D</span><span>A</span><span>T</span><span>I</span><span>O</span><span>N</span></a></li>
+                    <li><a style="color: white; cursor: hand; cursor: pointer" ng-if="!ctrl.loggedIn" ng-click="ctrl.openModal('login', 'sm')" class="link link--yaku"><span>L</span><span>O</span><span>G</span><span>I</span><span>N</span></a></li>
+                    <li><a style="color: white; cursor: hand; cursor: pointer" ng-if="!ctrl.loggedIn" ng-click="ctrl.openModal('register', 'md')" class="link link--yaku"><span>R</span><span>E</span><span>G</span><span>I</span><span>s</span><span>T</span><span>E</span><span>R</span></a></li>
+                    <li><a style="color: white; cursor: hand; cursor: pointer" ng-if="ctrl.loggedIn" ng-click="ctrl.logout()" class="link link--yaku"><span>L</span><span>O</span><span>G</span><span>O</span><span>U</span><span>T</span></a></li>
+                    <li><a style="color: white; cursor: hand; cursor: pointer" ng-if="ctrl.loggedIn" ng-click="ctrl.openModal('userDetails', 'md')" class="link link--yaku"><span>H</span><span>i</span><span>!</span>&nbsp;&nbsp;<span>{{ctrl.userDetails.name}}</span></a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+    <!--<div style="height: 100vh; overflow: hidden; background: #607d8b">-->
+    <div style="height: 100vh; overflow: hidden; background: #607d8b">
+
+        <div class="row aboutusdiv" style="margin: 15vh 0 0 0; text-align: left">
+            <h1 class="main-h1 " style="color: #FDD835"><span class="main-span">aBaCUS '17</span></h1><br>
+            <p class="main-sa-p" style="color:#FFFFFF; height: 70vw; overflow: auto">
+                <b><label style="font-weight: 900; color: #FDD835">Why Student Ambassador?</label></b><br>
+                It's not every day you get a chance to be someone special.
+                The Student Ambassador program lets you be the star in your college, the one who is responsible for spreading information about Abacus 2017 and be the front runner of the event.<br><br>
+
+                <b><label style="font-weight: 900; color: #FDD835">What are the benefits of Student Ambassador?</label></b><br>
+                1) Free onsite Registration.<br>
+
+                2) Free passes to attend Workshops.<br>
+
+                3) Letter of Appreciation from the Dept. of Computer Science, Anna University.<br>
+
+                4) Welcome kit. <br><br>
+                <!--In addition, you are entitled to numerous benefits. Bring in 5 workshop registrations or 10 event registrations,
+                your event registration becomes free and with 10 workshop registrations,
+                <span style="color: #251818">
+                    <b><i>you can attend any HOW TO workshop (except FITBIT).</i></b>
+                </span>
+                If you could pull out a huge crowd, you can attend even more number of workshops free of charge.<br>-->
+                <!--Hurry and-->
+                <!--<span style="color: blue; cursor: pointer" ng-click="ctrl.openConfirmModal()">
+                    <i><u>Sign up!</u></i>
+                </span>-->
+                <button class="btn " type="button" ng-click="ctrl.openConfirmModal()"
+                        style="padding: 5px 5px; font-size: 30px; color: black; background: #009688;
+                        font-family: 'Josefin Sans', sans-serif; font-weight: 700;">Sign Up</button>
+            </p>
+            <br>
+        </div>
+    </div>
+</div>

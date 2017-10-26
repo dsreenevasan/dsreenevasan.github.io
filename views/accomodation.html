@@ -1,0 +1,43 @@
+<div ng-controller="SAController as ctrl">
+    <toaster-container toaster-options="{'position-class': 'toast-top-center', 'close-button':true }"></toaster-container>
+    <nav class="navbar navbar-default navbar-fixed-top" style="background: #f39c12">
+        <div class="container">
+            <!--<img src="../images/test.png" style="height: 12vh; width: 4.90vw; margin: -1.5vh 0 0 -7vw; float: left">-->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only main-span">Toggle navigation</span>
+                    <span class="icon-bar main-span"></span>
+                    <span class="icon-bar main-span"></span>
+                    <span class="icon-bar main-span"></span>
+                </button>
+                <a class="navbar-brand" ng-click="ctrl.stateChange('main')"  style=" color: white; cursor: hand; cursor: pointer">Abacus '17</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li><a ng-click="ctrl.stateChange('events')" class="link link--yaku" style="color: white; cursor: hand; cursor: pointer  "><span>E</span><span>V</span><span>E</span><span>N</span><span>T</span><span>S</span></a></li>
+                    <li><a ng-click="ctrl.stateChange('workshops')" class="link link--yaku" style="color: white; cursor: hand; cursor: pointer  "><span>W</span><span>O</span><span>R</span><span>K</span><span>S</span><span>H</span><span>O</span><span>P</span><span>S</span></a></li>
+                    <li><a ng-click="ctrl.stateChange('sa')" class="link link--yaku" style="color: white; cursor: hand; cursor: pointer  "><span>S</span><span>T</span><span>U</span><span>D</span><span>E</span><span>N</span><span>T</span><span>A</span><span>M</span><span>B</span><span>A</span><span>S</span><span>S</span><span>A</span><span>D</span><span>O</span><span>R</span></a></li>
+                    <li><a style="color: white; cursor: hand; cursor: pointer" ng-if="!ctrl.loggedIn" ng-click="ctrl.openModal('login', 'sm')" class="link link--yaku"><span>L</span><span>O</span><span>G</span><span>I</span><span>N</span></a></li>
+                    <li><a style="color: white; cursor: hand; cursor: pointer" ng-if="!ctrl.loggedIn" ng-click="ctrl.openModal('register', 'md')" class="link link--yaku"><span>R</span><span>E</span><span>G</span><span>I</span><span>s</span><span>T</span><span>E</span><span>R</span></a></li>
+                    <li><a style="color: white; cursor: hand; cursor: pointer" ng-if="ctrl.loggedIn" ng-click="ctrl.logout()" class="link link--yaku"><span>L</span><span>O</span><span>G</span><span>O</span><span>U</span><span>T</span></a></li>
+                    <li><a style="color: white; cursor: hand; cursor: pointer" ng-if="ctrl.loggedIn" ng-click="ctrl.openModal('userDetails', 'md')" class="link link--yaku"><span>H</span><span>i</span><span>!</span>&nbsp;&nbsp;<span>{{ctrl.userDetails.name}}</span></a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <div style="height: 100vh; overflow: hidden; background: rgb(26, 188, 156)">
+        <div class="row aboutusdiv" style="margin: 15vh 0 0 0; text-align: left">
+            <br>
+            <h1 class="main-h1 " style="color: #FDD835"><span class="main-span">aBaCUS '17</span></h1><br>
+            <p class="main-sa-p" style="color:#FFFFFF; height: 70vw; overflow: auto">
+                Accommodation will be provided on 23&24 March inside CEG campus itself.<br><br>
+                Rs. 200 per head for one day.<br><br>
+                Those who need accommodation, mail your details to <span style="font-weight: 600; color: blue"><i><u>accommodation@abacus.org.in</u></i></span> or contact
+                <span style="font-weight: 600; color: blue">Deva Bharathi - (+91)9585724591 </span>
+            </p>
+            <br>
+        </div>
+    </div>
+</div>

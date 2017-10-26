@@ -1,0 +1,116 @@
+<div ng-controller="WorkshopsController as ctrl" id="bg" ng-keydown="ctrl.move($event)" tabindex="1" class="workshopMainDiv" ng-click="ctrl.changeOverlay()">
+    <toaster-container toaster-options="{'position-class': 'toast-top-center', 'close-button':true }"></toaster-container>
+    <div class="overlay" ng-if="ctrl.showOverlay">
+        <img src="../images/eventsInstructions.svg" ng-if="!ctrl.isMobile" style="height:50vh; width: 80vw; margin: 15vh 0 0 10vw">
+        <h1 style="color: white; text-align: center; margin: 20vh 0 0 0" ng-if="ctrl.isMobile"><u>Navigation Controls</u></h1>
+        <img src="../images/mobile.png" ng-if="ctrl.isMobile" style="height:20vh; width: 30vw; margin: 5vh 0 0 35vw">
+
+        <h4 style="color: white; text-align: center; margin: 5vh 0 0 0" ng-if="ctrl.isMobile">Swipe up and down to change between categories and swipe left and right to navigate between different workshops.</h4>
+        <h2 style="color: white; text-align: center; margin: 10vh 0 0 0; cursor: pointer" ng-click="ctrl.changeOverlay()"><u>Explore</u></h2>
+    </div>
+
+    <div class="wksptopTransparentDiv">
+        <i class="fa fa-home fa-icons" aria-hidden="true" ng-click="ctrl.go('main')" style="margin: 3vh 0 0 2vw; color: white; float: left; cursor: hand; cursor: pointer" data-toggle="tooltip" data-placement="right"  title="Home"></i><br>
+        <label class="fa-icons" style="color: white; margin: 0 0 0 42vw">{{ctrl.eventDetails[ctrl.centreDiv.genreId].genre}}</label>
+    </div>
+    <div class="wkspbottomTransparentDiv">
+        <label style="float: left" class="footer">Copyright 2016 @ CSEA.<br> All rights reserved.</label>
+        <label style="float: right"class="footer">For further queries,<br> Contact <strong style="color: #f5f5f5">webteam@abacus.org.in</strong></label>
+    </div>
+
+    <!--<div class="wkspverticalBackgroundDiv"></div>-->
+    <div class="wksphorizontalBackgroundDiv"></div>
+
+    <!--<div class="column col-md-1 verticalMainDiv" ng-repeat="genre in ctrl.eventDetails"
+         style="margin-top: {{ctrl.marginsTop[(ctrl.verticalDivPosition + $index + ctrl.eventDetails.length) %ctrl.eventDetails.length]}}; background: url('../images/events/bg-1.jpg'); background-size: 100% 100%; color: grey"
+         ng-if="ctrl.marginTopValue[(ctrl.verticalDivPosition + $index + ctrl.eventDetails.length) %ctrl.eventDetails.length] < 125">
+        &lt;!&ndash;ng-style="ctrl.marginTopValue[(ctrl.verticalDivPosition+$index+5) %5] < 6 || ctrl.marginTopValue[(ctrl.verticalDivPosition+$index+5) %5] > 50.6  && {'display': 'none'} || {}"&ndash;&gt;
+        {{genre.genre}}
+        &lt;!&ndash;<div style="height: 12vh; width: 30vw; background-color: teal">
+            {{event.name}}{{$index}}
+        </div>&ndash;&gt;
+    </div>-->
+    <div class="row horizontalDivRow" ng-init="ctrl.setFocus()" id="navigation">
+        <div class="column col-md-1 workshop-horizontalMainDiv" ng-repeat="event in ctrl.eventDetails[ctrl.centreDiv.genreId].events"
+             style="margin-left: {{ctrl.eventDetails[ctrl.centreDiv.genreId].margins[(ctrl.divPosition+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length]}};
+             background-image: url({{event.image}}); background-size: 100% 100%;"
+             ng-if="(ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] > -16
+                && ctrl.eventDetails[ctrl.centreDiv.genreId].marginValue[(ctrl.divPosition+$index+ctrl.eventDetails[ctrl.centreDiv.genreId].events.length) %ctrl.eventDetails[ctrl.centreDiv.genreId].events.length] < 106)">
+
+           <!-- <div style="position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url({{event.image}}); background-size: 100% 100%;
+    opacity: .8;
+    width: 100%;
+    height: 100%;"></div>
+            {{event.name}}-->
+            <!--<div style="height: 16vh; width: 8vw; margin-top: 40%; background-color: teal">
+                {{event.name}}{{$index}}
+            </div>-->
+        </div>
+        <div class="mainMidDiv" ng-swipe-up="ctrl.change(38)" ng-swipe-down="ctrl.change(40)" ng-swipe-left="ctrl.change(37)" ng-swipe-right="ctrl.change(39)"
+             style="background-image: url({{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].image}}); background-size: 100% 100%">
+            <div class="mainInnerDiv">
+                <div ng-class="ctrl.horizontalMidDiv == 3 || ctrl.horizontalMidDiv == 5 || ctrl.horizontalMidDiv == 2 ? 'workshop-bigMidContentsDiv' : 'workshop-midContentsDiv'" ng-if="ctrl.show == 1" ng-bind-html="ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].description">
+                </div>
+                <div class="workshop-midContentsDiv" ng-if="ctrl.show == 3">
+                    <ul>
+                        <li ng-repeat="contact in ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].contact">{{contact}}</li>
+                    </ul>
+                </div>
+                <div class="workshop-midContentsDiv" ng-if="ctrl.show == 2">
+                    Date : {{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].info.date}}<br>
+                    Fees: Rs.{{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].info.fee}}<br>
+                    {{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].info.members}}
+                </div>
+                <div class="midDivNavRing" ng-hide="ctrl.eventDetails[ctrl.centreDiv.genreId].genreId == 3 || ctrl.eventDetails[ctrl.centreDiv.genreId].genreId == 5 || ctrl.eventDetails[ctrl.centreDiv.genreId].genreId == 6">
+                    <i class="fa fa-file-text fa-icons noPreventDefault" aria-hidden="true" ng-click="ctrl.show = 1" data-toggle="tooltip" data-placement="left" title="Description" style=" cursor: hand; cursor: pointer"
+                    ng-style="ctrl.show == 1 && {'color': '#f97340'} || {}"></i><br>
+                    <i class="fa fa-gavel fa-icons noPreventDefault" aria-hidden="true" ng-click="ctrl.show = 2" data-toggle="tooltip" data-placement="left" title="Info" style=" cursor: hand; cursor: pointer"
+                       ng-style="ctrl.show == 2 && {'color': '#f97340'} || {}"></i><br>
+                    <i class="fa fa-phone fa-icons noPreventDefault" aria-hidden="true" ng-click="ctrl.show = 3" data-toggle="tooltip" data-placement="left" title="Contact" style=" cursor: hand; cursor: pointer"
+                       ng-style="ctrl.show == 3 && {'color': '#f97340'} || {}"></i><br>
+                    <!--<i class="fa fa-pencil fa-icons noPreventDefault" aria-hidden="true" ng-click="ctrl.registerWorkshop()" data-toggle="tooltip" data-placement="left" title="Register" style=" cursor: hand; cursor: pointer"></i><br>-->
+                </div>
+                <div id="bottomDiv" style="font-weight: 900" ng-class="ctrl.horizontalMidDiv == 5 || ctrl.horizontalMidDiv == 4 ? 'workshop-bigMainMidBottomDiv' : 'workshop-mainMidBottomDiv'">&nbsp;&nbsp;{{ctrl.eventDetails[ctrl.centreDiv.genreId].events[ctrl.horizontalMidDiv].name}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="workshopBulkReg">
+        For bulk registration, Contact <span style="color: yellow"><b>Aswin - 84894 56000, Faizaan - 96001 03058</b></span>
+    </div>
+
+    <div class="navIcons" data-toggle="tooltip" data-placement="top" title="Use Left and Right Arrows">
+        <i class="fa fa-chevron-circle-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <i class="fa fa-chevron-circle-right"></i>
+    </div>
+
+    <form method="POST" style="display: none" action="../php/workshop_reg.php">
+        <input type="text" id="workshop_a_id" name="a_id" ng-model="ctrl.workshop_a_id" >
+        <input type="text" id="workshop_emailId" name="emailId" ng-model="ctrl.workshop_emailId">
+        <input type="number" id="workshop_workshop" name="workshop" ng-model="ctrl.workshop_workshop">
+        <button type="submit" id="workshop_reg_button" ng-click="ctrl.sample()">Submit</button>
+    </form>
+
+</div>
+
+<script>
+    if($('html').hasClass('fp-enabled')){
+        $.fn.fullpage.destroy('all');
+    }
+
+    $(document).ready(function () {
+        $('#viewport').fullpage({
+            afterLoad: function(anchorLink, index){
+                $('#fp-nav').hide();
+            }
+        });
+
+
+    });
+</script>

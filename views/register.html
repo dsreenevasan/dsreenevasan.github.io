@@ -1,0 +1,72 @@
+<div id="canvas-wrap" ng-controller="MainController as ctrl">
+<!--<canvas id="c" style="width: 130vw;"></canvas>-->
+    <!--<div id="overlay">-->
+
+    <form class="form-horizontal register-form" role="form" name="registerForm">
+
+    <h1 class="register-h1">Register</h1>
+
+    <fieldset class="register-fieldset">
+        <legend class="register-legend"><span class="number">1</span>Your basic info</legend>
+        <label class="register-label" for="name">Full Name:</label>
+        <input class="register-input" type="text" id="name" name="user_name" ng-model="ctrl.name" required="true" placeholder="Enter Full name">
+
+        <label class="register-label" for="mail">Email:</label>
+        <input class="register-input" type="email" id="mail" name="user_email"  ng-model="ctrl.emailId" required="true" placeholder="Enter Email">
+
+        <label class="register-label" for="password">Password:</label>
+        <input class="register-input" type="password" id="password" name="user_password" ng-change="ctrl.checkPassword()" ng-model="ctrl.password" data-toggle="tooltip" data-placement="right" title="Password Must be atleast 8 characters" required="true" placeholder="Minimum 8 characters">
+        <p style="color:red" ng-if="ctrl.passwordInvalid">Invalid Password(Atleast 8 characters)</p>
+
+        <!--<label class="register-label" for="confirmPassword">Confirm Password:</label>
+        <input class="register-input" type="password" id="confirmPassword" name="user_confirm_password"  ng-model="ctrl.confirmPassword" required="true" placeholder="Confirm Password">
+        <p>Passwords do not match</p>-->
+
+        <label class="register-label" for="phone">Phone Number:</label>
+        <input class="register-input" type="number" id="phone" name="user_phone" ng-change="ctrl.checkPhoneNumber()" required="true"  ng-model="ctrl.phoneNumber" placeholder="Enter Phone no.">
+        <p style="color:red" ng-if="ctrl.phoneNumberNotValid">Invalid Contact Number</p>
+
+
+    </fieldset>
+
+        <legend class="register-legend"><span class="number">2</span>Your educational info</legend>
+        <label class="register-label" for="College">College:</label>
+        <!--<input class="register-input" type="text" id="college" name="user_college" ng-model="ctrl.collegeName" required="true" placeholder="Enter College name">-->
+        <select class="register-select" id="college" name="user_college" ng-model="ctrl.collegeName" required>
+            <option ng-repeat="college in ctrl.colleges  track by $index">{{college}}</option>
+        </select>
+
+        <label class="register-label" for="dept">Department:</label>
+        <!--<input class="register-input" type="text" id="dept" name="user_dept" ng-model="ctrl.department" required="true" placeholder="Enter department">-->
+        <select class="register-select" id="dept" name="user_dept" ng-model="ctrl.department" required>
+            <option ng-repeat="dept in ctrl.departments  track by $index">{{dept}}</option>
+        </select>
+
+        <label class="register-label" for="year">Year:</label>
+        <select class="register-select" id="year" name="user_year" ng-model="ctrl.year" required>
+            <option value="first">1</option>
+            <option value="second">2</option>
+            <option value="third">3</option>
+            <option value="fourth">4</option>
+        </select>
+    </fieldset>
+
+        <!--<div vc-recaptcha key="ctrl.publicKey" style="margin: 0 0 0 10vw" ></div>-->
+        <img src="../images/sponsors/uniq-1.jpg" height="90px" width="100%" style="display: block; margin: auto; cursor: pointer" ng-click="ctrl.openLink('http://uniq.co.in/')">
+        <br>
+        <div style="display: block; margin: auto; color: blue; text-align: center">
+            <span ng-click="ctrl.openLink('http://www.inplanttraining.org/')" style="cursor: pointer"><i>IPT</i></span>&nbsp;|&nbsp;
+            <span ng-click="ctrl.openLink('http://www.internshipinchennai.com/')" style="cursor: pointer"><i>Internship</i></span>&nbsp;|
+            <span ng-click="ctrl.openLink('http://www.ieeefinalyearprojects.org/')" style="cursor: pointer"><i>IEEE projects</i></span>&nbsp;|&nbsp;
+            <span ng-click="ctrl.openLink('http://www.androidtraininginchennai.com/')" style="cursor: pointer"><i>Android Training</i></span><br><br>
+        </div>
+
+        <!--<div class="g-recaptcha" data-sitekey="6LetiBcUAAAAAHEsMJERL8lZNkryc0EfYbhK8XVR"></div>-->
+    <button class="register-button" type="submit" ng-if="!ctrl.isSubmitting" ng-click="ctrl.register()" ng-disabled="registerForm.$invalid || ctrl.phoneNumberNotValid || ctrl.passwordInvalid">Submit</button>
+    <div style="text-align: center" ng-if="ctrl.isSubmitting">
+        <p style="font-size: 1.5em">Please wait...</p>
+    </div>
+</form>
+    <!--</div>-->
+</div>
+

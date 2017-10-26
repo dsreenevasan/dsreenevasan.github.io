@@ -1,0 +1,40 @@
+<div ng-controller="UserDetailsController as ctrl">
+    <toaster-container toaster-options="{'position-class': 'toast-top-center', 'close-button':true }"></toaster-container>
+    <div>
+        <div class="modal-header">
+            <h3 class="modal-title" id="modal-title">Hackathon - Rules</h3>
+        </div>
+        <div class="modal-body" id="modal-body" style="padding: 35px">
+            <ul>
+                <li>
+                    This is a team participation hackathon. You must have <b>exactly 4 members</b> in your team.
+                </li>
+                <li>
+                    The hackathon will start at 24-03-2017 9.30pm and end at 25-03-2017 8.00am, you work on your hack during the allotted time only.
+                </li>
+                <li>
+                    It's a physical hackathon, the venue is
+
+                    College of Engineering Guindy, Anna University, Chennai-25
+                </li>
+                <li>
+                    You are expected to come up with new and innovative ideas, any idea that has been copied from somewhere will be disqualified.
+                </li>
+                <li>
+                    More weightage will be given to idea of your application and execution practices used to achieve the desired goal.
+                </li>
+
+                <li>
+                    Your hack must be developed entirely during the Hackathon duration. You may use open source libraries and other freely available systems / services such as Google Maps, Facebook Connect, Twitter feeds etc.
+                </li>
+
+		<li>
+		   You must bring your own laptops and other required gadgets.
+		</li>	
+            </ul>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ctrl.cancel()" style="padding: 5px 5px; font-size: 20px;">Done</button>
+        </div>
+    </div>
+</div>

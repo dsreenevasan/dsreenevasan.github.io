@@ -1,0 +1,27 @@
+<div class="login modal-demo" style="height: 50vh;" ng-controller="MainController as ctrl">
+    <div class="card">
+
+
+        <header class="card__thumb">
+            <a href="#"><img src="../images/computercard.png" id="computercard"/></a>
+
+            <div id ="formbox">
+                <form class="form login-form">
+                    <input class="form-input" type="email" name="email" ng-model="ctrl.email" placeholder="email" required>
+                    <!--<input class="form-input" type="password" name="password" ng-model="ctrl.password" placeholder="password" required>-->
+                    <!--<a href="#" class="btn gold">LOGIN</a>-->
+                </form>
+            </div>
+        </header>
+
+        <div class="card__body">
+            <a href="#" class="btn gold" ng-click="ctrl.login()">LOGIN</a>
+        </div>
+        <footer class="card__footer">
+            <!--<span class="glyphicon glyphicon-user"></span>-->
+            <!--<i class="fa fa-phone"></i>--><br><a ng-click="ctrl.openRegister()" style="font-size: 2em; cursor: pointer"> Sign Up </a>
+            <!--&emsp;
+            <span class="glyphicon glyphicon-lock"></span><a href="#"> forgot password</a>-->
+        </footer>
+    </div>
+</div>

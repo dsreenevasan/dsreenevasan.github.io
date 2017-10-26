@@ -1,0 +1,425 @@
+<div class="container" ng-controller="MainController as ctrl" style="height: 1000px; width: 100%; padding: 0 0 0 0;" id="main">
+	<toaster-container ng-if="!ctrl.right" toaster-options="{'position-class': 'toast-top-center', 'close-button':true }"></toaster-container>
+	<toaster-container ng-if="ctrl.right" toaster-options="{'position-class': 'toast-top-right', 'close-button':true }"></toaster-container>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<!--<img src="../images/test.png" style="height: 12vh; width: 4.90vw; margin: -1.5vh 0 0 -7vw; float: left">-->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only main-span">Toggle navigation</span>
+					<span class="icon-bar main-span"></span>
+					<span class="icon-bar main-span"></span>
+					<span class="icon-bar main-span"></span>
+				</button>
+				<a class="navbar-brand" ng-click="ctrl.resetFullpage()"  style=" color: white; cursor: hand; cursor: pointer">Abacus '17</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right" style="margin-right: -5vw">
+
+					<li><a ng-click="ctrl.stateChange('events')" class="link link--yaku" style="color: white; cursor: hand; cursor: pointer  "><span>E</span><span>V</span><span>E</span><span>N</span><span>T</span><span>S</span></a></li>
+					<li><a ng-click="ctrl.stateChange('workshops')" class="link link--yaku" style="color: white; cursor: hand; cursor: pointer  "><span>W</span><span>O</span><span>R</span><span>K</span><span>S</span><span>H</span><span>O</span><span>P</span><span>S</span></a></li>
+					<li><a ng-click="ctrl.stateChange('sa')" class="link link--yaku" style="color: white; cursor: hand; cursor: pointer  "><span>S</span><span>T</span><span>U</span><span>D</span><span>E</span><span>N</span><span>T</span><span>A</span><span>M</span><span>B</span><span>A</span><span>S</span><span>S</span><span>A</span><span>D</span><span>O</span><span>R</span></a></li>
+					<li><a ng-click="ctrl.stateChange('accommodation')" class="link link--yaku" style="color: white; cursor: hand; cursor: pointer  "><span>A</span><span>C</span><span>C</span><span>O</span><span>M</span><span>M</span><span>O</span><span>D</span><span>A</span><span>T</span><span>I</span><span>O</span><span>N</span></a></li>
+					<!--<li><a style="color: white; cursor: hand; cursor: pointer" ng-if="!ctrl.loggedIn" ng-click="ctrl.openModal('login', 'sm')" class="link link&#45;&#45;yaku"><span>L</span><span>O</span><span>G</span><span>I</span><span>N</span></a></li>
+					<li><a style="color: white; cursor: hand; cursor: pointer" ng-if="!ctrl.loggedIn" ng-click="ctrl.openModal('register', 'md')" class="link link&#45;&#45;yaku"><span>R</span><span>E</span><span>G</span><span>I</span><span>s</span><span>T</span><span>E</span><span>R</span></a></li>
+					<li><a style="color: white; cursor: hand; cursor: pointer" ng-if="ctrl.loggedIn" ng-click="ctrl.logout()" class="link link&#45;&#45;yaku"><span>L</span><span>O</span><span>G</span><span>O</span><span>U</span><span>T</span></a></li>
+					<li><a style="color: white; cursor: hand; cursor: pointer" ng-if="ctrl.loggedIn" ng-click="ctrl.openModal('userDetails', 'md')" class="link link&#45;&#45;yaku"><span>H</span><span>i</span><span>!</span>&nbsp;&nbsp;<span>{{ctrl.userDetails.name}}</span></a></li>-->
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+
+	<div class="row" style="background: black">
+		<div ng-class="{ 'column col-md-10' : ctrl.maxWidth != 0, 'column col-md-12' : ctrl.maxWidth == 0 }">
+
+			<div id="fullpage" style="font-family: 'Josefin Sans', sans-serif;">
+				<div class="section " id="section0" style="height: 80vh">
+					<div class="logo-div" >
+						<img src="../images/abacus%20mouse_PNG.png" class="logo-image">
+						<!--<label style="margin: 23vh 0 0 3.3vw; font-size: 0.75em">Compute. Compete. Conquer.</label>-->
+						<!--<img src="../images/web_logo.png" class="logo-image">-->
+					</div>
+					<div class='city' style="zoom: 1.9; margin: -53.6vh 0 0 0">
+					<!--<div class='city' style="margin-left: 20vw">-->
+						<div class='landscape' style="margin: 0 0 0 -19.5vw">
+							<div class='inner'>
+								<div class='moon'></div>
+								<div class='cityscape'>
+									<div class='building' ng-click="ctrl.check()">
+										<div class='windows'></div>
+										<div class='radio1'></div>
+										<div class='radio2'></div>
+										<div class='radio3'></div>
+									</div>
+									<div class='building' ng-click="ctrl.check()">
+										<div class='windows'></div>
+										<div class='radio1'></div>
+										<div class='radio4'></div>
+										<div class='radio3'></div>
+									</div>
+									<div class='building' ng-click="ctrl.check()">
+										<div class='windows'></div>
+									</div>
+									<div class='building' ng-click="ctrl.check()">
+										<div class='windows'></div>
+									</div>
+									<div class='building' ng-click="ctrl.check()">
+										<div class='windows'></div>
+										<div class='radio1'></div>
+										<div class='radio5'></div>
+									</div>
+									<div class='building' ng-click="ctrl.check()">
+										<div class='windows'></div>
+									</div>
+									<div class='building' ng-click="ctrl.check()">
+										<div class='windows'></div>
+									</div>
+									<div class='building' ng-click="ctrl.check()">
+										<div class='windows'></div>
+										<div class='radio7'></div>
+										<div class='radio2'></div>
+										<div class='radio8'></div>
+										<div class='radio5'></div>
+									</div>
+									<div class='building zoom1' ng-click="ctrl.openModal('register', 'md')">
+										<div class='windows' data-toggle="tooltip" data-placement="top" title="Register" style="cursor: pointer"></div>
+										<div class='radio4'></div>
+										<div class='radio5'></div>
+										<div class='radio6'></div>
+									</div>
+									<div class='building zoom1' ng-click="ctrl.openModal('login', 'sm')">
+										<div class='windows' data-toggle="tooltip" data-placement="top" title="Login" style="cursor: pointer"></div>
+										<div class='radio7'></div>
+										<div class='radio2'></div>
+										<div class='radio8'></div>
+									</div>
+									<div class='building zoom1' ng-click="ctrl.stateChange('sa')">
+										<div class='windows'  data-toggle="tooltip" data-placement="top" title="SA" style="cursor: pointer"></div>
+										<div class='radio9'></div>
+										<div class='radio10'></div>
+										<div class='radio2'></div>
+									</div>
+									<div class='building' ng-click="ctrl.check()">
+										<div class='windows'></div>
+										<div class='radio1'></div>
+										<div class='radio4'></div>
+										<div class='radio6'></div>
+									</div>
+									<div class='building' ng-click="ctrl.check()">
+										<div class='windows'></div>
+									</div>
+									<div class='building' ng-click="ctrl.check()">
+										<div class='windows'></div>
+										<div class='radio7'></div>
+										<div class='radio10'></div>
+										<div class='radio2'></div>
+									</div>
+									<div class='building zoom' ng-click="ctrl.stateChange('workshops')">
+										<div class='windows'  data-toggle="tooltip" data-placement="top" title="Workshops" style="cursor: pointer"></div>
+										<div class='radio7'></div>
+										<div class='radio10'></div>
+										<div class='radio2'></div>
+									</div>
+									<div class='building zoom' ng-click="ctrl.stateChange('events') ">
+										<div class='windows' data-toggle="tooltip" data-placement="right" title="Events" style="cursor: pointer"></div>
+										<div class='radio7'></div>
+										<div class='radio2'></div>
+									</div>
+									<div class='building zoom' ng-click="ctrl.stateChange('sa')">
+										<div class='windows'  data-toggle="tooltip" data-placement="top" title="Student Ambassador" style="cursor: pointer"></div>
+										<div class='radio7'></div>
+										<div class='radio1'></div>
+										<div class='radio5'></div>
+									</div>
+									<div class='building' ng-click="ctrl.check()">
+										<div class='windows'></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class='foreground' style="margin: 0 0 0 -19.5vw; z-index: 4">
+							<div class='inner' style="z-index: 4">
+								<div class='welcome'>
+									<h1 class="main-h1">
+										Welcome to
+									</h1>
+									<h2 style="margin-top: -0.1vh">
+										<span class="main-span">aBaCUS</span>
+									</h2>
+								</div>
+								<!--<div class='trees'>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+									<div class='tree'></div>
+								</div>-->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section" id="section1" style=" background-color: #00ACC1; height: 80vh " >
+
+					<div class="row aboutusdiv" >
+						<h1 class="main-h1 " style="color: #FDD835"><span class="main-span">aBaCUS '17</span></h1>
+						<p class="main-p" style="color:#FFFFFF">aBaCUS, the national level technical symposium, conducted by CSEA primarily focuses on showcasing the skills of some of the best brains in the country.
+							aBaCuS, over the years has weaved a technical web, connecting smart minds in digital era, thus helping them unleash their expertness.
+							With an interesting array of events and workshops piled up, aBaCUS 2017 is all set to set trends.</p>
+						<br>
+					</div>
+				</div>
+				<div class="section" id="section2" style="background-color: #1abc9c; height: 70vh ">
+                    <div class="row aboutusdiv" >
+					<h1 class="main-h1" style="color: #FDD835"><span class="main-span" style="border-bottom-color: #4CAF50" >CSEA</span></h1>
+					<p class="main-p" style="color: #FFFFFF;">CSEA (Computer Science and Engineering Association), the student body of the department of Computer Science and Engineering has always been successful in its mission of quenching the technical thirst of the tech-wizards.
+						Sync, the intra-college symposium and aBaCUS, the inter-college symposium are the two juggernauts of this enthralling team of students.
+						Undoubtedly, they have always been great triumphs in emboldening the student community.</p>
+                        <br>
+                    </div>
+
+				</div>
+				<div class="section" id="section3" style="background-color: #27ae60; ">
+					<div class="slide active">
+						<div class="intro">
+							<!--<img data-src="imgs/2.png" alt="Cool" height="176" width="176" />-->
+							<h1 class="contacts-heading">WORKSHOP</h1>
+							<p class="contacts-contacts">Faizaan 9600103058</p>
+							<p class="contacts-contacts">Ashwin 8489456000</p>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="intro">
+							<!--<img data-src="imgs/1.png" alt="simple" height="176" width="176" />-->
+							<h1 class="contacts-heading">EVENTS</h1>
+							<p class="contacts-contacts">Manoj Kumar 9597250572</p>
+							<p class="contacts-contacts">Muthunagappan 9445811755</p>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="intro">
+							<!--<img data-src="imgs/3.png" alt="Compatible" height="176" width="176" />-->
+							<h1 class="contacts-heading">ACCOMODATION</h1>
+							<p class="contacts-contacts">Deva Bharathi 9585724591</p>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="intro">
+							<!--<img data-src="imgs/3.png" alt="Compatible" height="176" width="176" />-->
+							<h1 class="contacts-heading">WEB AND TECH</h1>
+							<p class="contacts-contacts">Muthuraj 9655804033</p>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="intro">
+							<!--<img data-src="imgs/3.png" alt="Compatible" height="176" width="176" />-->
+							<h1 class="contacts-heading">MARKETING</h1>
+							<p class="contacts-contacts">Keerthivasan 7845531020</p>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="intro">
+							<!--<img data-src="imgs/3.png" alt="Compatible" height="176" width="176" />-->
+							<h1 class="contacts-heading">INDUSTRIAL RELATIONS</h1>
+								<p class="contacts-contacts">Manish 8220653674</p>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="intro">
+							<h1 class="contacts-heading">CHAIRMAN</h1>
+							<p class="contacts-contacts">Giritharan 8098380066</p>
+							<!--<img data-src="imgs/slider.png" alt="slider" height="132" width="662" id="slidersImg" />-->
+						</div>
+					</div>
+
+				</div>
+				<div class="section" id="section4" style="background-color: #AA8F00 ">
+					<div class="slide active" style="text-align: center; vertical-align: middle;">
+						<div class="intro">
+							<img src="../images/sponsors/amazon_logo.png"  height="225px" width="225px">
+							<h1>Events sponsor</h1>
+						</div>
+					</div>
+
+					<div class="slide" style="text-align: center; vertical-align: middle;">
+						<div class="intro">
+							<img src="../images/sponsors/freshdesk_logo.jpg" height="225px" width="225px">
+							<h1>Events sponsor</h1>
+						</div>
+					</div>
+					<div class="slide" style="text-align: center; vertical-align: middle;">
+						<div class="intro">
+							<img src="../images/sponsors/Gigamon-Logo.png" height="225px" width="225px">
+							<h1>Events sponsor</h1>
+						</div>
+					</div>
+
+					<div class="slide" style="text-align: center; vertical-align: middle;">
+						<div class="intro">
+							<img src="../images/sponsors/myswots_logo.png">
+							<h1>Events sponsor</h1>
+						</div>
+					</div>
+					<div class="slide" style="text-align: center; vertical-align: middle;">
+						<div class="intro">
+							<img src="../images/sponsors/ninjakart_logo.png">
+							<h1>Events sponsor</h1>
+						</div>
+					</div>
+
+					<div class="slide" style="text-align: center; vertical-align: middle;">
+						<div class="intro">
+							<img src="../images/sponsors/groupon_logo.jpg" height="75px" width="225px">
+							<h1>Events sponsor</h1>
+						</div>
+					</div>
+					<div class="slide" style="text-align: center; vertical-align: middle;">
+						<div class="intro">
+							<img src="../images/sponsors/IBM_logo.png" height="225px" width="225px">
+							<h1>Workshop sponsor</h1>
+						</div>
+					</div>
+					<div class="slide" style="text-align: center; vertical-align: middle;">
+						<div class="intro">
+							<img src="../images/sponsors/medianetransparent.png">
+							<h1>Workshop sponsor</h1>
+						</div>
+					</div>
+					<div class="slide" style="text-align: center; vertical-align: middle;">
+						<div class="intro">
+							<img src="../images/sponsors/robokart_logo.png">
+							<h1>Workshop sponsor</h1>
+						</div>
+					</div>
+					<div class="slide" style="text-align: center; vertical-align: middle;">
+						<div class="intro">
+							<img src="../images/sponsors/twenty19_logo.jpg" height="225px" width="225px">
+							<h1>Student Internship Partner</h1>
+						</div>
+					</div>
+
+					<div class="slide" style="text-align: center; vertical-align: middle;" ng-click="ctrl.openUniq()">
+						<div class="intro">
+							<img src="../images/sponsors/uniq-1.jpg" height="75px" width="225px">
+							<h1>Delicate & Kits Partner</h1>
+						</div>
+					</div>
+
+
+				</div>
+				<div class="section fp-auto-height" id="section5" style="background-color: #23282d">
+					<label style="float: left;color: white; padding-top: 5px" class="footer">Copyright 2017 @ CSEA.<br> All rights reserved.</label>
+					<label style="float: right;color: white; padding-top: 5px"class="footer">For further queries,<br> Contact <strong class="webteam">webteam@abacus.org.in</strong></label>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+<style>
+	#header, #footer{
+		position:fixed;
+		height: 75px;
+		display:block;
+		width: 100%;
+		background: coral;
+		z-index:9;
+		/*text-align:center;*/
+		color: #f2f2f2;
+		padding: 0 0 0 0;
+	}
+
+
+</style>
+
+
+<script>
+
+	$(document).ready(function() {
+		// Transition effect for navbar
+		$(window).scroll(function() {
+			// checks if window is scrolled more than 500px, adds/removes solid class
+			if($(this).scrollTop() > 500) {
+				$('.navbar').addClass('solid');
+			} else {
+				$('.navbar').removeClass('solid');
+			}
+		});
+	});
+
+	//destroying
+	if($('html').hasClass('fp-enabled')){
+	    $.fn.fullpage.destroy('all');
+	}
+
+	$(document).ready(function () {
+		$('#fullpage').fullpage({
+			css3: true,
+			navigation: true,
+			navigationPosition: 'right',
+			keyboardScrolling: true,
+			controlArrows: true,
+			loopBottom: true,
+			afterRender: function () {
+				setInterval(function () {
+					$.fn.fullpage.moveSlideRight();
+				}, 4000);
+			},
+			afterLoad: function(anchorLink, index){
+				// Section indexes in fullpage start at 1
+				/*if(index === $('#fullpage .section').length){
+					window.location.href = "http://stackoverflow.com";
+				}*/
+				console.log(index);
+				if(index == 1){
+					$('.navbar').removeClass('solid');
+					$('.navbar').removeClass('solidone');
+				}
+				else if(index>1 && index==2) {
+					$('.navbar').addClass('solid');
+					$('.navbar').removeClass('solidone');
+				}
+				else if(index>1 && index==3){
+					$('.navbar').removeClass('solid');
+					$('.navbar').addClass('solidone');
+					$('.navbar').removeClass('solidtwo');
+				}
+				else if(index>1 && index==4) {
+					$('.navbar').removeClass('solidone');
+					$('.navbar').addClass('solidtwo');
+				}
+				else if(index>1 && index==5) {
+					$('.navbar').removeClass('solidtwo');
+					$('.navbar').addClass('solidone');
+				}
+			}
+		});
+
+
+	});
+
+</script>

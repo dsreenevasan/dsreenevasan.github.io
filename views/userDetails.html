@@ -1,0 +1,45 @@
+<div ng-controller="UserDetailsController as ctrl">
+    <toaster-container toaster-options="{'position-class': 'toast-top-center', 'close-button':true }"></toaster-container>
+    <div ng-if="ctrl.loggedIn">
+        <div class="modal-header">
+            <h3 class="modal-title" id="modal-title"></h3>
+        </div>
+        <div class="modal-body" id="modal-body">
+            Name: {{ctrl.details.name}}<br>
+            E-mail: {{ctrl.details.mail}}<br>
+            Department: {{ctrl.details.dept}}<br>
+            College: {{ctrl.details.college}}<br>
+            Phone No: {{ctrl.details.phno}}<br>
+            Year: {{ctrl.details.year}}<br>
+            Abacus id: {{ctrl.details.a_id}}<br>
+            Registered workshops: <br>
+            <ul>
+                <li ng-if="ctrl.details.wrsp0 == 'REGISTERED'" style="margin-left: 10vw">
+                    {{ctrl.workshops[0]}} - {{ctrl.details.wrsp0st}}
+                </li>
+                <li ng-if="ctrl.details.wrsp1 == 'REGISTERED'" style="margin-left: 10vw">
+                    {{ctrl.workshops[1]}} - {{ctrl.details.wrsp1st}}
+                </li>
+                <li ng-if="ctrl.details.wrsp2 == 'REGISTERED'" style="margin-left: 10vw">
+                    {{ctrl.workshops[2]}} - {{ctrl.details.wrsp2st}}
+                </li>
+                <li ng-if="ctrl.details.wrsp3 == 'REGISTERED'" style="margin-left: 10vw">
+                    {{ctrl.workshops[3]}} - {{ctrl.details.wrsp3st}}
+                </li>
+                <li ng-if="ctrl.details.wrsp4 == 'REGISTERED'" style="margin-left: 10vw">
+                    {{ctrl.workshops[4]}} - {{ctrl.details.wrsp4st}}
+                </li>
+                <li ng-if="ctrl.details.wrsp5 == 'REGISTERED'" style="margin-left: 10vw">
+                    {{ctrl.workshops[5]}} - {{ctrl.details.wrsp5st}}
+                </li>
+            </ul>
+
+
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-warning" type="button" ng-click="ctrl.updateUserDetails()" style="padding: 5px 5px; font-size: 20px;">Update</button>&nbsp;&nbsp;
+            <button class="btn btn-primary" type="button" ng-click="ctrl.cancel()" style="padding: 5px 5px; font-size: 20px;">Done</button>
+        </div>
+    </div>
+    <div ng-if="!ctrl.loggedIn">Logged Out</div>
+</div>
