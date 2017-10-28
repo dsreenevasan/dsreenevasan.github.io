@@ -54,8 +54,7 @@
                     format: {rounds: ["Pen and paper round that contains questions related to Unix,Linux. Question pattern consists of both MCQ and short answers.",
 				"Surprise Hacking Event based on Linux/Unix. No sudo access and Internet access provided."]},
                     contact: [
-                        "Prabhakaran - 7200210789",
-                        "Ilanchelian - 9445171664"
+                        "Vishvesh Thangamani - 9195693399"
                     ],
                     image: "../images/events/tech/nix.jpg"},
                 { id: 2, name: "OSPC", description: "Are you a superclass from whom 'the whole class' inherits the code during the frenzied lab sessions ?<br>" +
@@ -66,11 +65,7 @@
                 "Participants are not allowed to bring any additional material.", "Any kind of malpractice will lead to disqualification.", "Decisions made by the administrators will be final and binding."]},
                 format: {rounds: ["A Written round consisting of questions based on Data Structures, Algorithms and Programming logic.", "The final round will be similar to ACM-ICPC."]},
                 contact: [
-                "Suresh - 9444136901",
-                    "Muthu Nagappan - 9445811755",
-                    "Vishvesh Thangamani - 9195693399" ,
-                    "Tamizh Vendhan - 7299802300",
-		    "Ravi Kiran - 80561 31962"],
+                    "Vishvesh Thangamani - 9195693399"],
                 image: "../images/events/tech/ospc.jpg"},
                 { id: 3, name: "Debugging",
                     description: "'To err is to be human' goes the saying.'<br><br>" +
@@ -80,9 +75,7 @@
                     rules: {points: ["Each team can have a maximum of three members.", "The members of a team can be from different colleges/institutions."]},
                     format: {rounds: ["A written round consisting of simple debugging questions.", "You will be given the code which may or may not have logical/syntactic bugs.  You have to identify the errors and fix them."]},
                     contact: [
-                        "Arjundhanraj - 7598306818",
-                        "Sakthiprasath - 8110010630",
-                        "Mahmood Sultan - 8807777901"
+                        "Vishvesh Thangamani - 9195693399"
                     ],
                     image: "../images/events/tech/debugging.jpg"},
                 { id: 4, name: "DBmania",
@@ -92,9 +85,7 @@
                     rules: {points: ["Each team can have a maximum of 2 members.", "The members of a team can be from different colleges/institutions."]},
                     format: {rounds: ["Basic Questions on Database. (40 Questions)", "You will be given a schema and asked to build schema diagram ,queries, triggers, functions and procedures."]},
                     contact: [
-                        "Arun - 8124267121",
-                        "Gowri Shankar - 8903462709",
-                        "Muthu Thillai Natarajan - 9655883077"
+                        "Vishvesh Thangamani - 9195693399"
                     ],
                     image: "../images/events/tech/db_mania.jpg"},
                 { id: 5, name: "Game of Nerds",
@@ -106,9 +97,7 @@
                     format: {rounds: ["This will be the preliminary round. Basic questions on Data Structures and Algorithms, Computer Architecture, Database Management Systems,Operating Systems,Web Technology, Theory of Computation and Networks will be put forth.",
                     "Will be revealed on-spot"]},
                     contact: [
-                        "Gokila - 9841183871",
-                        "Poonkuzhali - 9003273214",
-                        "Deepthi - 9003102993"
+                        "Vishvesh Thangamani - 9195693399"
                     ],
                     image: "../images/events/tech/game_of_nerds.jpg"},
                 { id: 6, name: "Cyber Wars",
@@ -119,13 +108,7 @@
                     format: {rounds: ["There will be two rounds totally.", "First round will be of pen and paper based.", 
 			"Second round will be using system and format will be revealed onspot", "Topics:", "Cryptography", "Networks", "Operating systems"]},
                     contact: [
-                        "Radhika - 9962720188",
-                        "Manimegalai - 8939321066",
-                        "Rekha - 9094553868",
-                        "Nandhini - 9444833190",
-                        "Abirami - 9940220259",
-                        "Pavithra - 8870603612",
-                        "Ajay - 8883339409"
+                        "Vishvesh Thangamani - 9195693399"
                     ],
                     image: "../images/events/tech/cyber_wars.jpg"},
                 { id: 7, name: "Reverse Coding",
@@ -135,10 +118,7 @@
                     rules: {points: ["Each team can have a maximum of three members.", "The members of a team can be from different colleges/institutions."]},
                     format: {rounds: ["Written round consisting of various reverse coding questions.", "Same format as Prelims. Coding has to be done on computer."]},
                     contact: [
-                        "Manojkumar - 9597250572",
-                    "Harini - 9444850785",
-                    "Shruthi - 9944263196",
-                    "Makisha - 9629078175"
+                        "Vishvesh Thangamani - 9195693399"
                     ],
                     image: "../images/events/tech/reverse_coding.jpg"},
                 { id: 8, name: "Webaholic",
@@ -149,9 +129,7 @@
                     format: {rounds: ["Questions from HTML,CSS, JAVASCRIPT, JQUERY, PHP. No of Questions : 40. Duration :30 mins", "Develop webpages using HTML,CSS,JS without any references.",
                     "Develop a website using these. 1.  Google Maps API. 2.  Use any database using any backend language. 3.  encoding / decoding"]},
                     contact: [
-                        "Vagul - 9789117799",
-                        "Durai Sreenevasan - 9894543958",
-                        "Santha Kumar - 96005 38775"
+                        "Vishvesh Thangamani - 9195693399"
                     ],
                     image: "../images/events/tech/webaholic.jpg"},
                 { id: 9, name: "‘RE’PRESENT",
@@ -176,8 +154,7 @@
                         "Cloud computing(healthcare)",
                         "Artificial Intelligence in machines."]},
                     contact: [
-                        "Nivedhitha - 8870401260",
-                        "Loshmitha - 8870884010"
+                        "Vishvesh Thangamani - 9195693399"
                     ],
                     image: "../images/events/tech/represent.jpg"},
                 { id: 10, name: "Mr or Ms Geek",
@@ -190,7 +167,7 @@
                     format: {rounds: ["Round 1:Quantitative aptitude,verbal",
                         "Round 2: Technical aptitude",
                         "Round 3: Face to face interview"]},
-                    contact: ["Neeharika -  9566179068"],
+                    contact: ["Vishvesh Thangamani - 9195693399"],
                     image: "../images/events/tech/geek.jpg"}],
             marginValue: [-45, -35, -25, -15, 4, 45, 83, 105, 115, 125], margins :['-45vw', '-35vw', '-25vw', '-15vw', '4vw', '45vw', '83vw', '105vw', '115vw', '125vw']},
             {genreId: 2, genre: "General", events: [
@@ -212,20 +189,20 @@
                     rules: {points:["Each person will get one turn.", "If the task is not completed in the given time then you eventually lose.",
                                     "Completing the task on time is mandatory to win a coupon.", "In case of any discrepancy the organizer's decision is final."]},
                     format: {rounds:["The wheel has to be spun and correspondingly tasks are to be completed by the participant", "The tasks would be revealed only on the day of the event"]},
-                    contact: ["Jenifer    9790718543"],
+                    contact: ["Vishvesh Thangamani - 9195693399"],
                     image: "../images/events/general/spin.jpg"},
                 {id: 2, name: "Abacus General Quiz",
                     description: "He who questions,thinks. He who answers,knows. For all the thinkers and knowers,welcome to Abacus General Quiz. Come surprise us with your general awareness of stuff in this single round of quizzing, which will include questions from current affairs to science. Much prizes to be won. Top first-year only teams would bag a definite prize.(P.S: No questions will be asked about soppana sundari :P)",
                     rules: {points:["The teams could consist of two or three members.", "Lone wolves are expected to be social enough to form a team."]},
                     format: {rounds:["The teams would have to answer a single round of general quiz consisting of 40 questions", "Tie breaking would be done on the basis of starred questions"]},
-                    contact: ["Prasath 94879 69618"],
+                    contact: ["Vishvesh Thangamani - 9195693399"],
                     image: "../images/events/general/gen_quiz.jpg"},
                 {id: 3, name: "Finding Nemo",
                     description: "Calling all 007’s, Sherlocks and Langdons! Do you have what it takes to decipher some of the hardest enigmas and explore unchartered territories? Like Marlin and Dory, can you connect the dots and locate Nemo? If you think you can crack and track your way out of this labyrinth, then this is your arena!",
                     rules: {points:["Teams of three only", "Decision by the organisers are final",
                         "Use of Google will be selectively allowed", "Violation of any or all of the above rules will lead to instant disqualification"]},
                     format: {rounds:["Will be updated soon"]},
-                    contact: ["Keerthana - 9042389902"],
+                    contact: ["Vishvesh Thangamani - 9195693399"],
                     image: "../images/events/general/selfie_hunt.jpg"},
                 {id: 4, name: "Abacus Premier League",
                     description: "Chance to pick top players at a price of your choice. Come and taste the actual recipe of an IPL Auction, where an auctioneer will roll out all the players to be selected by the franchises to make a strong team. Come in and find how well you can manage money matters and how strong your team can be picked!",
@@ -237,7 +214,7 @@
                         "Abacus ID is a must"]},
                     format: {rounds:["20 questions to be solved in 30 minutes. Top 8 scorers progress to the final stage",
                         "8 teams. Each team will have a specific franchise. Real Auction with a purse of a specific amount which you can use to pick your team. Further rules will be announced on spot"]},
-                    contact: ["Prasanna - 9003222748"],
+                    contact: ["Vishvesh Thangamani - 9195693399"],
                     image: "../images/events/general/apl.jpg"},
                 {id: 5, name: "Housefull",
                     description: "Projects...Internals..Lab_Sem... still stressed? <br>" +
@@ -246,7 +223,7 @@
                         "The judge's’ decision would be binding and final."]},
                     format: {rounds:["Round 1 will be pen and paper round with 25 questions.",
                         "Round 2 and 3 will be logical and fun!"]},
-                    contact: ["Pradeepa - 9698111129", "Vishnu Piriya - 8526925200"],
+                    contact: ["Vishvesh Thangamani - 9195693399"],
                     image: "../images/events/general/house_full.jpg"},
                 {id: 6, name: "FANDOM QUIZ",
                     description: "'We are here to see koothrapaali...Not kill batman!'<br>" +
@@ -259,7 +236,7 @@
                         "At any point in the Quiz, the Quiz Master’s decision stands final."]},
                     format: {rounds:["The First Round will be Written Round with built-in Tie Breakers.",
                         "Based on Scores, Top 8 Teams qualify for the Finals."]},
-                    contact: ["Sukin Kumar - +919944513445", "Makesh Narsimhan - +919445657670", "Krishna Anandan - +919629138856"],
+                    contact: ["Vishvesh Thangamani - 9195693399"],
                     image: "../images/events/general/gen_quiz.jpg"},
                 {id: 7, name: "GAMINDROME",
                     description: "Tired of all the technical buzz going around you at aBaCus?<br>" +
@@ -270,7 +247,7 @@
                     rules: {points:["The decision of the judges is binding and final.",
                         "All participants must have a valid Abacus Id."]},
                     format: {rounds:["Format would be revealed only on the day of Abacus :P (24th March)"]},
-                    contact: ["Mugilan - 81898 91645", "Jegatheeswaran - 96776 15641"],
+                    contact: ["Vishvesh Thangamani - 9195693399"],
                     image: "../images/events/general/gamindrome.jpg"},
                 {id: 8, name: "Randomize",
                     description: "Be weird, be random be who you are!<br>" +
@@ -282,7 +259,7 @@
                     format: {rounds:["Round 1: Connections -30 mins 25 questions and no negative marks",
                         "Round 2:Silence Speaks - 1 min per act",
                         "Round 3:Channel Surfing -5 mins per team"]},
-                    contact: ["Karishma - 91764 89785"],
+                    contact: ["Vishvesh Thangamani - 9195693399"],
                     image: "../images/events/general/randomise.jpg"}],
                 marginValue: [-35, -25, -15, 3, 45, 83, 105, 115], margins :['35vw', '-25vw', '-15vw', '4vw', '45vw', '83vw', '105vw', '115vw']},
                 /*marginValue: [-15, 3, 45, 83], margins :[ '-15vw', '4vw', '45vw', '83vw']},*/
@@ -299,15 +276,13 @@
                         "Your hack must be developed entirely during the Hackathon duration. You may use open source libraries and other freely available systems / services such as Google Maps, Facebook Connect, Twitter feeds etc."]},
                     /*rules: {points: ["Will be updated soon"]},*/
                     format: {rounds:["The Theme will be announced on the day of the event.","Jot down all problems you want to crack. Choose the one that you can in the next 24 hours and Get Set Go! You are supposed to design and build your idea. The submission product can be Web app, Android, Windows, Gaming App or anything creative enough that you consider will win this Hackathon."]},
-                    contact: ["Renga Bashyam 	7598010654",
-                        "Bharath Bhargav	9787975416",
-                        "Sankara Narayanan   9488119314"],
+                    contact: ["Vishvesh Thangamani - 9195693399"],
                 image: "../images/events/night/hackathon.jpg"},
 		{id: 2,
                     name: "Coding Hungama",
                     description: "Do you suffer from the wicked coding insomnia?<br>" +
 				"To all the phantoms of the coding world, the right place for you to be is here at the all night long coding marathon.<br>" +
-				"Come combat all night at the fun filled 'Coding hungama' proudly presented by aBaCUS'17.�<br>Keep calm and code on",
+				"Come combat all night at the fun filled 'Coding hungama' proudly presented by aBaCUS'17.�<br>Keep calm and code on",
                     rules: {points:["This is a team participation. There can be at most 2 members in the team.",
                         "The event will start at 23-03-2017 09:00 pm and end at 24-03-2017 08:00 am",
                         "All participants must have a valid Abacus ID.",
@@ -316,9 +291,7 @@
                     format: {rounds:["1st round - ICPC style coding round - 3 hours",
 			"2nd round - Code Obfuscation	    - 2 hours",
 			"3rd round - Math based programming  - 3 hours"]},
-                    contact: ["Arjundhanraj    - 7598306818",
-                        "Bharath Bhargav   -  9787975416",
-                        "Suresh   - 94441369014"],
+                    contact: ["Vishvesh Thangamani - 9195693399"],
                 image: "../images/events/night/hackathon.jpg"}],
                 marginValue: [3,45], margins :['3vw', '45vw']},
             {genreId: 4, genre: "Online Events", events: [
@@ -327,9 +300,7 @@
                     rules: {points: ["All participants must have a valid Abacus ID.","Only individual participation is allowed.",
                         "Individuals found to be involved in plagiarism will not be considered in the final rank list.",
                         "Rules of Codechef will also apply."]},
-                    contact: ["Renga Bashyam - 7598010654",
-                        "Bharath Bhargav - 9787975416",
-                        "Sankara Narayanan - 9488119314"],
+                    contact: ["Vishvesh Thangamani - 9195693399"],
                     image: "../images/events/online/olpc.jpg"},
                 {id: 2, name: "The Beautiful Mind",
                     description: "This event consists of tricky questions and you have the answer them, simple as that. But here's comes the crux: You'll need to write code to find the answer, such are the questions. Lengthy calculations and complex answers are things humans have little patience with. After all, that's what computers were made for, weren't they?",
@@ -339,15 +310,13 @@
                         "Any number of attempts could be taken to answer a question. But the final answer submitted would be taken for consideration.",
                         "Only individual participation is allowed."]},
                     format: {rounds:["A single round of 20 questions"," The event would go on from 9pm to 10.30pm on March 19,2017"]},
-                    contact: ["Renga Bashyam - 7598010654",
-                        "Bharath Bhargav - 9787975416",
-                        "Sankara Narayanan - 9488119314"],
+                    contact: ["Vishvesh Thangamani - 9195693399"],
                     image: "../images/events/online/tbm.jpg"},
                 {id: 3, name: "Da Vinci Code",
                     description: "Clues, links and puzzles excite you more than anything else. Join the online treasure hunt event by aBaCUs and prove your dexterity and persistence. With the little information you're given, only your intellect and wisdom will help you solve the DaVinci Code.",
                     rules: {points:["Will be updated soon"]},
                     format: {rounds:[" "]},
-                    contact: ["Raj Madhan - 9789231286"],
+                    contact: ["Vishvesh Thangamani - 9195693399"],
                     image: "../images/events/online/davinci_code.jpg"},
                 {id: 4, name: "Infocus",
                     description: "When words become unclear I shall focus with photographs... when images become inadequate I shall be content with silence! A photograph involves 2 people... one before the lens and one behind it. A good photographer is the one who notices extraordinary details among ordinary stuff. Show us how your lens can capture these unseen details in the daily world! <br><br>" +
@@ -359,7 +328,7 @@
                         "Plagiarism if found might lead to disqualification."]},
                     format: {rounds: ["The photographs must be sent to infocus@abacus.org.in",
                         "The last date for submitting the entries is 22 March,2017"]},
-                    contact: ["Manish - 8220653574"],
+                    contact: ["Vishvesh Thangamani - 9195693399"],
                     image: "../images/events/online/infocus.jpg"}/*
                 {id: 4, name: "Scribble Away",
                     image: "../images/events/paper.jpg"},
