@@ -310,10 +310,10 @@
 
 .logo-image{
     height: auto;
-    width: 16vw;
+    width: 225px;
     z-index: 100;
     position: absolute;
-    margin: 7vh 0 0 3.8vw;
+    margin: 50px 0 0 50px;
 }
 
 /*.logo-div {
@@ -635,10 +635,10 @@
 
     .logo-image{
         height: auto;
-        width: 35vw;
+        width: 120px;
         z-index: 100;
         position: absolute;
-        margin: 5vh 0 0 4.5vw;
+        margin: 50px 0 0 25px;
     }
 
     .navIcons{
@@ -945,11 +945,11 @@
     }
 
     .logo-image{
-        height: 50vh;
-        width: 35vw;
+        height: auto;
+        width: 200px;
         z-index: 100;
         position: absolute;
-        margin: -8vh 0 0 -1.5vw;
+        margin: 50px 0 0 75px;
     }
 
     .navIcons{
